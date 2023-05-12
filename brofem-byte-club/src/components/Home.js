@@ -12,7 +12,7 @@ const Home = () => {
 
     return (
         <div>
-            <h2>Recentt Blog Posts</h2>
+            <h2>Recent Blog Posts</h2>
             {posts.map((post) => (
                 <div key={post.id}>
                     <h3>{post.title}</h3>
