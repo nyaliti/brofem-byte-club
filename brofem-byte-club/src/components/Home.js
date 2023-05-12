@@ -1,27 +1,22 @@
-import React from "react";
-import Post from "./Post";
+import React, { useEffect, useState } from 'react';
+import BlogPost from './BlogPost';
 
 const Home = () => {
-    //Sample data for blog posts
-    const posts = [
-        { id: 1, title: 'First Post', content: 'This is the first blog post.'},
-        { id: 2, title: 'Second Post', content: 'This is the second blog post.'},
-        //Add more sample posts
-    ];
+  const [posts, setPosts] = useState([]);
 
+  useEffect(() => {
+    // Fetch blog posts from the server
+    // Update the "posts" state
+  }, []);
 
-    return (
-        <div>
-            <h2>Recent Blog Posts</h2>
-            {posts.map((post) => (
-                <div key={post.id}>
-                    <h3>{post.title}</h3>
-                    <p>{post.content}</p>
-                    </div>
-            ))}
-        </div>
-    );
+  return (
+    <div>
+      <h2>Welcome to the Blogging Platform</h2>
+      {posts.map((post) => (
+        <BlogPost key={post.id} post={post} />
+      ))}
+    </div>
+  );
 };
-
 
 export default Home;
