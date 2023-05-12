@@ -7,7 +7,7 @@ const Login = () => {
     const [password, setPassword] = useState('');
 
 
-    // Fuction to handle Logi form submission
+    // Fuction to handle Login form submission
     const handleLogin = (e) => {
         e.preventDefault();
         // Implement login logic
