@@ -1,22 +1,25 @@
 import React from 'react';
-import Login from './Login';
-import Register from './Register';
-import CreatePost from './CreatePost';
-
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-    return (
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Login</li>
-                <li>Register</li>
-                <li>Create Post</li>
-            </ul>
-        </nav>
-    );
-    
+  return (
+    <nav>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/login">Login</Link>
+        </li>
+        <li>
+          <Link to="/register">Register</Link>
+        </li>
+        <li>
+          <Link to="/create-post">Create Post</Link>
+        </li>
+      </ul>
+    </nav>
+  );
 };
-
 
 export default Navbar;
